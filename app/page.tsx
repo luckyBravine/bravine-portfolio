@@ -1,5 +1,9 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import {AiFillTwitterCircle, AiFillLinkedin} from 'react-icons/ai';
+import {BsGithub, BsDatabaseCheck} from "react-icons/bs";
+import {DiReact} from "react-icons/di";
+import {FaPhp, FaNodeJs} from "react-icons/fa";
+import {SiTailwindcss} from "react-icons/si"
 import Image from "next/image";
 import pic from '../public/pic.png';
 
@@ -36,18 +40,87 @@ export default function Home() {
           <AiFillTwitterCircle/>
           <AiFillLinkedin/>
         </div>
-        <div className="relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-80 h-80">
+        {/* <div className="relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-80 h-80">
           <Image alt="bravine" src={pic} fill className="object-cover"/>
-        </div>
+        </div> */}
       </section>
 
       <section>
         <div>
-          <h3 className="py-1 text-3xl">Services</h3>
-          <p className="py-5 leading-8 text-gray-800 text-md">
-            Transforming ideas into stunning, user-centric websites through responsive design, 
-            intuitive navigation, and seamless integration of cutting-edge technologies.
-          </p>
+          <span>Services</span>
+          <h3 className="py-1 text-3xl">Skill-Set</h3>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <BsGithub className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">Git & GitHub Commands</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <BsDatabaseCheck className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">Database Manipulation</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <DiReact className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">React</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <FaPhp className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">PHP Scripting</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <FaNodeJs className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">NodeJs</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="bg-stone-500 p-2 mt-3">
+              <div className="py-4 px-3">
+                <SiTailwindcss className="text-3xl text-white"/>
+              </div>
+              <h4 className="py-1 px-3 leading-8 text-gray-600">TailwindCSS Styling</h4>
+              <p className="py-2 px-3 leading-8 text-gray-800 text-md font-roboto-300">
+                Transforming ideas into stunning, user-centric websites through responsive design, 
+                intuitive navigation, and seamless integration of cutting-edge technologies.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section>
