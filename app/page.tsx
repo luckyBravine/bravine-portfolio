@@ -8,33 +8,33 @@ import {SiTailwindcss} from "react-icons/si"
 import Image from "next/image";
 import Screenshot4 from "../public/Screenshot4.png";
 import Screenshot8 from "../public/Screenshot8.png"
-import {Container, Heading, FormControl, Input, FormLabel} from "@chakra-ui/react";
-import { useState } from "react";
+// import {Container, Heading, FormControl, Input, FormLabel} from "@chakra-ui/react";
+// import { useState } from "react";
 
-const initValue = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-}
+// const initValue = {
+//   name: "",
+//   email: "",
+//   subject: "",
+//   message: "",
+// }
 
-const initState = {value: initValue}
+// const initState = {value: initValue}
 
 export default function Home() {
-  const [state, setState] = useState(initState);
+  // const [state, setState] = useState(initState);
 
-  const {value} = state;
+  // const {value} = state;
 
-  const handleChange = (event:any) => {
-    const { target } = event; // Explicitly define the type of 'target' as HTMLInputElement or the appropriate type for your use case
-    setState((prev) => ({
-      ...prev,
-      value: {
-        ...prev.value,
-        [target.name]: target.value,
-      },
-    }));
-  };
+  // const handleChange = (event:any) => {
+  //   const { target } = event; // Explicitly define the type of 'target' as HTMLInputElement or the appropriate type for your use case
+  //   setState((prev) => ({
+  //     ...prev,
+  //     value: {
+  //       ...prev.value,
+  //       [target.name]: target.value,
+  //     },
+  //   }));
+  // };
   return (
     <main className="px-10 bg-white">
       <section className="min-h-screen">
@@ -167,7 +167,7 @@ export default function Home() {
                 <button className="flex px-3 py-1 m-2 text-sm transition-colors duration-300 border-2 border-green-500 rounded-2xl hover:bg-green-500 hover:text-white font-poppins"><a href="" className="flex items-center">Visit<MdKeyboardDoubleArrowRight className="pl-1 text-sm animate-ping"/></a></button>
               </div>
             </div>
-            <div className="flex flex-col rounded-lg shadow-xl bg-slate-100 md:flex-row">
+            {/* <div className="flex flex-col rounded-lg shadow-xl bg-slate-100 md:flex-row">
             <div className="w-full md:w-[50%] h-[400px] rounded-t-lg md:rounded-l-lg bg-gradient-to-r from-white to-blue-200 backdrop-filter backdrop-blur-lg">
                 <Image alt="portfolio1" src={Screenshot4} className="object-cover w-[100%] h-[100%] rounded-t-lg md:rounded-l-lg lg:rounded-l-lg bg-gradient-to-r from-white to-blue-200 backdrop-filter backdrop-blur-lg"/>
               </div>
@@ -188,10 +188,10 @@ export default function Home() {
                 </div>
                 <button className="flex px-3 py-1 m-2 text-sm transition-colors duration-300 border-2 border-green-500 rounded-2xl hover:bg-green-500 hover:text-white font-poppins"><a href="" className="flex items-center">Visit<MdKeyboardDoubleArrowRight className="pl-1 text-sm animate-ping"/></a></button>
               </div>
-            </div>
+            </div> */}
         </div>
       </section>
-      <section>
+      {/* <section>
         <span className="py-2 text-base font-semibold leading-8 text-gray-600 font-poppins">Let's Connect</span>
         <h3 className="py-1 text-3xl font-semibold font-poppins">Contact Me</h3>
         <Container maxW="500px" mt="12">
@@ -200,7 +200,7 @@ export default function Home() {
             <Input type="text" name="name" value={value.name}/>
           </FormControl>
         </Container>
-      </section>
+      </section> */}
     </main>
   );
 }
