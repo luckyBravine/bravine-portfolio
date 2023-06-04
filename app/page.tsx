@@ -55,9 +55,9 @@ export default function Home() {
           </ul>
         </nav>
         <div className="p-8 text-center">
-          <h2 className="py-2 text-5xl font-medium text-teal-600">Bravine Alusiola</h2>
-          <h3 className="py-2 text-2xl">Frontend Web designer</h3>
-          <p className="py-5 leading-8 text-gray-800 text-md">
+          <h2 className="py-2 text-5xl font-medium font-poppins">Bravine Alusiola</h2>
+          <h3 className="py-2 text-2xl font-poppins">Frontend Web designer</h3>
+          <p className="py-5 leading-8 text-gray-800 text-md font-poppins">
             Creating visually captivating and functionally seamless websites
             that leave a lasting impression.
           </p>
@@ -144,10 +144,10 @@ export default function Home() {
       <section className="py-3 my-5">
         <span className="py-2 text-base font-semibold leading-8 text-gray-600 font-poppins">Projects</span>
         <h3 className="py-1 text-3xl font-semibold font-poppins">Portfolio</h3>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4">
             <div className="flex flex-col rounded-lg shadow-xl bg-slate-100 md:flex-row ">
-              <div className="w-full md:w-[50%] h-[400px] rounded-t-lg lg:rounded-l-lg">
-                <Image alt="portfolio1" src={Screenshot8} className="object-cover w-[100%] h-[100%] rounded-t-lg lg:rounded-l-lg"/>
+              <div className="w-full h-[400px] rounded-t-lg md:w-[50%] md:rounded-l-lg lg:rounded-l-lg">
+                <Image alt="portfolio1" src={Screenshot8} className="object-cover w-[100%] h-[100%] rounded-t-lg md:rounded-l-lg"/>
               </div>
               <div className="md:w-[50%]">
                 <h4 className="px-3 py-3 mb-1 text-lg font-semibold leading-4 text-gray-800 font-poppins">The Christian Union Web-App</h4>
