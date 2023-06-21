@@ -4,37 +4,13 @@ import {BsGithub, BsDatabaseCheck} from "react-icons/bs";
 import {DiReact} from "react-icons/di";
 import {FaPhp, FaNodeJs} from "react-icons/fa";
 import {MdKeyboardDoubleArrowRight} from "react-icons/md"
+import {GoMail} from "react-icons/go"
 import {SiTailwindcss} from "react-icons/si"
 import Image from "next/image";
 import Screenshot4 from "../public/Screenshot4.png";
 import Screenshot8 from "../public/Screenshot8.png"
-// import {Container, Heading, FormControl, Input, FormLabel} from "@chakra-ui/react";
-// import { useState } from "react";
-
-// const initValue = {
-//   name: "",
-//   email: "",
-//   subject: "",
-//   message: "",
-// }
-
-// const initState = {value: initValue}
 
 export default function Home() {
-  // const [state, setState] = useState(initState);
-
-  // const {value} = state;
-
-  // const handleChange = (event:any) => {
-  //   const { target } = event; // Explicitly define the type of 'target' as HTMLInputElement or the appropriate type for your use case
-  //   setState((prev) => ({
-  //     ...prev,
-  //     value: {
-  //       ...prev.value,
-  //       [target.name]: target.value,
-  //     },
-  //   }));
-  // };
   return (
     <main className="px-10 bg-white">
       <section className="min-h-screen">
@@ -64,12 +40,9 @@ export default function Home() {
           
         </div>
         <div className="flex justify-center gap-12 py-3 text-5xl text-gray-600">
-          <AiFillTwitterCircle/>
-          <AiFillLinkedin/>
+          <a href="https://twitter.com/LuckyBravine"><AiFillTwitterCircle/></a>
+          <a href="https://www.linkedin.com/in/bravine-alusiola-896ab3217/"><AiFillLinkedin/></a>
         </div>
-        {/* <div className="relative mx-auto mt-20 overflow-hidden rounded-full bg-gradient-to-b from-teal-500 w-80 h-80">
-          <Image alt="bravine" src={pic} fill className="object-cover"/>
-        </div> */}
       </section>
 
       <section>
@@ -164,43 +137,16 @@ export default function Home() {
                     <li>MongoDB</li>
                   </ul>
                 </div>
-                <button className="flex px-3 py-1 m-2 text-sm transition-colors duration-300 border-2 border-green-500 rounded-2xl hover:bg-green-500 hover:text-white font-poppins"><a href="" className="flex items-center">Visit<MdKeyboardDoubleArrowRight className="pl-1 text-sm animate-ping"/></a></button>
+                <button className="flex px-3 py-1 m-2 text-sm transition-colors duration-300 border-2 border-green-500 rounded-2xl hover:bg-green-500 hover:text-white font-poppins"><a href="https://luckybravine.github.io/christian-union-static-version/" className="flex items-center">Visit<MdKeyboardDoubleArrowRight className="pl-1 text-sm animate-ping"/></a></button>
               </div>
             </div>
-            {/* <div className="flex flex-col rounded-lg shadow-xl bg-slate-100 md:flex-row">
-            <div className="w-full md:w-[50%] h-[400px] rounded-t-lg md:rounded-l-lg bg-gradient-to-r from-white to-blue-200 backdrop-filter backdrop-blur-lg">
-                <Image alt="portfolio1" src={Screenshot4} className="object-cover w-[100%] h-[100%] rounded-t-lg md:rounded-l-lg lg:rounded-l-lg bg-gradient-to-r from-white to-blue-200 backdrop-filter backdrop-blur-lg"/>
-              </div>
-              <div className="md:w-[50%]">
-                <h4 className="px-3 py-3 mb-1 text-lg font-semibold leading-4 text-gray-800 font-poppins">Admin Dashboard</h4>
-                <p className="px-3 text-base leading-5 text-gray-600 font-poppins">
-                  This was a complementary dashboard to the Christian Union website.
-                </p>
-                <div className="flex flex-col px-2 py-3">
-                  <h5 className="font-semibold leading-8 text-gray-700 font-poppins">Resources Used</h5>
-                  <ul className="text-sm leading-6 text-gray-600 font-poppins">
-                    <li>ReactJs</li>
-                    <li>Tailwind Css</li>
-                    <li>Syncfusion Components</li>
-                    <li>NodeJs</li>
-                    <li>MongoDB</li>
-                  </ul>
-                </div>
-                <button className="flex px-3 py-1 m-2 text-sm transition-colors duration-300 border-2 border-green-500 rounded-2xl hover:bg-green-500 hover:text-white font-poppins"><a href="" className="flex items-center">Visit<MdKeyboardDoubleArrowRight className="pl-1 text-sm animate-ping"/></a></button>
-              </div>
-            </div> */}
         </div>
       </section>
-      {/* <section>
+      <section>
         <span className="py-2 text-base font-semibold leading-8 text-gray-600 font-poppins">Let's Connect</span>
-        <h3 className="py-1 text-3xl font-semibold font-poppins">Contact Me</h3>
-        <Container maxW="500px" mt="12">
-          <FormControl>
-            <FormLabel>Name</FormLabel>
-            <Input type="text" name="name" value={value.name}/>
-          </FormControl>
-        </Container>
-      </section> */}
+        <h3 className="py-1 text-3xl font-semibold font-poppins">About Me</h3>
+        <p className="px-3 py-2 text-base font-normal leading-6 text-stone-600 font-poppins">I am a Frontend developer who is adaptable to changes in the dynamics and technological change in project so as to attain maximum beneficial result</p>
+      </section>
     </main>
   );
 }
