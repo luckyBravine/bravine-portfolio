@@ -47,7 +47,7 @@ export default function Profile() {
             </ul>
             <div className="action-buttons font-poppins">
               <a
-                href="../../public/BravineMmbayiaresume.pdf"
+                href="/BravineMmbayiaresume.pdf"
                 title="resume"
                 className="flex items-center"
                 target="_blank"
