@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import fig from "../../public/fig.jpeg";
-import BravineMmbayiaresume from "../../public/BravineMmbayiaresume.pdf";
 import "./profile.css";
 import { RiFileDownloadFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
@@ -48,12 +47,12 @@ export default function Profile() {
             </ul>
             <div className="action-buttons font-poppins">
               <a
-                href={BravineMmbayiaresume}
+                href="../../public/BravineMmbayiaresume.pdf"
                 title="resume"
                 className="flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
-                download={BravineMmbayiaresume}
+                download="BravineMmbayiaresume"
               >
                 Download Resume <RiFileDownloadFill className="pl-2 text-2xl" />
               </a>
