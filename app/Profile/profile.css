@@ -5,10 +5,11 @@
     --primary-violet: #7370F4;
 }
 
-body {
+.bool {
     background-color: var(--background);
     display: grid;
     place-items: center;
+    justify-content: center;
     height: 100vh;
     padding: 24px;
     font-size: 16px;
