@@ -192,8 +192,6 @@ export default function Home() {
                     I have leveraged TypeScript to craft a dynamic and
                     interactive web application, enabling seamless integration
                     of database functionality and efficient content management.
-                    By harnessing TypeScript's strong typing system and advanced
-                    features, I've ensured a robust and maintainable codebase
                   </p>
                 </div>
 

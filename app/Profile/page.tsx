@@ -7,18 +7,6 @@ import { RiFileDownloadFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 export default function Profile() {
-  // const downloadResume = () => {
-  //   fetch('/api/downloadResume')
-  //   .then((response) => response.blob())
-  //   .then((blob) => {
-  //     // Create a link element
-  //     const a = document.createElement('a');
-  //     a.href = URL.createObjectURL(blob);
-  //     a.download = 'BravineMmbayiaresume.pdf';
-  //     a.click();
-  //   })
-  //   .catch((error) => console.error('Error downloading resume:', error));
-  // }
   return (
     <div className="relative bool">
       <div className="container">
@@ -74,7 +62,6 @@ export default function Profile() {
               >
                 Download Resume <RiFileDownloadFill className="pl-2 text-2xl" />
               </a>
-              {/* <button onClick={downloadResume}>Download Resume</button> */}
               <a
                 href="https://github.com/luckyBravine"
                 className="secondary flex items-center"
