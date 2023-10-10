@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import fig from "../../public/fig.jpeg";
@@ -6,22 +7,39 @@ import { RiFileDownloadFill } from "react-icons/ri";
 import { BsGithub } from "react-icons/bs";
 import { BiArrowBack } from "react-icons/bi";
 export default function Profile() {
+  // const downloadResume = () => {
+  //   fetch('/api/downloadResume')
+  //   .then((response) => response.blob())
+  //   .then((blob) => {
+  //     // Create a link element
+  //     const a = document.createElement('a');
+  //     a.href = URL.createObjectURL(blob);
+  //     a.download = 'BravineMmbayiaresume.pdf';
+  //     a.click();
+  //   })
+  //   .catch((error) => console.error('Error downloading resume:', error));
+  // }
   return (
-    <div className="relative">
-      <Link href="/" className="text-xl font-burtons absolute mt-6 ml-4">
-        {" "}
-        <BiArrowBack className="pr-2 text-white text-2xl" />
-        Bravine.dev{" "}
-      </Link>
+    <div className="relative bool">
       <div className="container">
         <article className="card">
-          <div className="background">
+          <div className="background relative">
             <Image src={fig} alt="profile" />
           </div>
           <div className="content">
-            <span className="py-2 text-base font-semibold leading-8 text-gray-600 font-poppins dark:text-white">
-              Profile
-            </span>
+            <div className="flex justify-between items-center">
+              <span className="py-2 text-base font-semibold leading-8 text-gray-600 font-poppins dark:text-white">
+                Profile
+              </span>
+              <Link
+                href="/"
+                className="py-2 text-base font-semibold leading-8 text-gray-600  font-burtons"
+                passHref
+              >
+                {" "}
+                Home{" "}
+              </Link>
+            </div>
             <h3 className="py-1 mb-1 text-3xl font-semibold font-poppins dark:text-gray-200">
               Bravine Mmbayia A
             </h3>
@@ -47,15 +65,16 @@ export default function Profile() {
             </ul>
             <div className="action-buttons font-poppins">
               <a
-                href="../../public/BravineMmbayiaresume.pdf"
+                href="/_next/public/static/BravineMmbayiaresume.pdf"
                 title="resume"
                 className="flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="BravineMmbayiaresume"
+                download
               >
                 Download Resume <RiFileDownloadFill className="pl-2 text-2xl" />
               </a>
+              {/* <button onClick={downloadResume}>Download Resume</button> */}
               <a
                 href="https://github.com/luckyBravine"
                 className="secondary flex items-center"
