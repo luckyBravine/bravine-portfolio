@@ -189,9 +189,11 @@ export default function Home() {
                     TypeScript
                   </h4>
                   <p className="px-3 py-2 text-base font-normal leading-6 text-stone-600 font-poppins dark:text-gray-300">
-                    I have utilized PHP to create a dynamic and interactive
-                    website, allowing for seamless integration of database
-                    functionality and content management.
+                    I have leveraged TypeScript to craft a dynamic and
+                    interactive web application, enabling seamless integration
+                    of database functionality and efficient content management.
+                    By harnessing TypeScript's strong typing system and advanced
+                    features, I've ensured a robust and maintainable codebase
                   </p>
                 </div>
 
