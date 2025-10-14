@@ -27,6 +27,7 @@ import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect, useCallback, memo } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import Link from "next/link";
 import React, { ReactNode, useRef } from "react";
 
 interface AnimatedSectionProps {
@@ -288,7 +289,7 @@ const Home = memo(() => {
               className="flex justify-center gap-4 mb-8"
             >
               <motion.a
-                href="/static/BravineMmbayiaresume.pdf"
+                href="/static/BRAVINEMMBAYIA.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
