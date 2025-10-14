@@ -19,14 +19,13 @@ import {
 } from "react-icons/bs";
 import { DiReact } from "react-icons/di";
 import { FaPhp, FaNodeJs } from "react-icons/fa";
-import { MdKeyboardDoubleArrowRight, MdWork, MdSchool } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight, MdSchool } from "react-icons/md";
 import { GoMail } from "react-icons/go";
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiJavascript } from "react-icons/si";
 import { TbBrandReactNative, TbBrandFramerMotion } from "react-icons/tb";
 import Image from "next/image";
 import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect, useCallback, memo } from "react";
-import Link from "next/link";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import React, { ReactNode, useRef } from "react";
 
@@ -151,7 +150,7 @@ const Home = memo(() => {
               >
                 Bravine.dev
               </motion.h1>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4">
                 <motion.button
                   whileHover={{ scale: 1.1, rotate: 180 }}
                   whileTap={{ scale: 0.95 }}
@@ -160,20 +159,25 @@ const Home = memo(() => {
                 >
                   <BsFillMoonStarsFill className="text-xl text-gray-700 dark:text-gray-300" />
                 </motion.button>
-                <Link
-                  href="/Profile"
-                  className="btn-primary"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-400 shadow-lg"
                 >
-                  <MdWork className="mr-2" />
-                  Profile
-                </Link>
+                  <Image
+                    src="/fig.jpeg"
+                    alt="Bravine Mmbayia"
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
         </motion.nav>
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
+        <section className="relative min-h-screen flex items-center justify-center px-6 pt-24">
           <motion.div
             style={{ y }}
             className="text-center max-w-4xl mx-auto"
@@ -228,7 +232,7 @@ const Home = memo(() => {
                 transition={{ delay: 0.4 }}
                 className="text-2xl md:text-3xl font-poppins font-medium text-gray-600 dark:text-gray-300 mb-6"
               >
-                Frontend Developer & UI/UX Designer
+                Software Engineer & Backend Developer
               </motion.h3>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -236,8 +240,8 @@ const Home = memo(() => {
                 transition={{ delay: 0.6 }}
                 className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto mb-8"
               >
-                Crafting exceptional digital experiences through innovative frontend solutions. 
-                Passionate about creating beautiful, functional, and user-centric web applications.
+                Backend Engineer with 3+ years of experience building scalable APIs, e-commerce platforms, 
+                and event-driven systems. Specialized in Node.js, Vendure.js, and Azure AD B2C.
               </motion.p>
             </motion.div>
 
@@ -270,7 +274,7 @@ const Home = memo(() => {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:bravinlude@gmail.com"
+                href="mailto:bravinemmbayia@gmail.com"
                 className="p-4 rounded-full bg-white/10 hover:bg-secondary-500 transition-all duration-300 text-2xl text-gray-600 hover:text-white shadow-medium hover:shadow-glow"
               >
                 <GoMail />
@@ -281,6 +285,26 @@ const Home = memo(() => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
+              className="flex justify-center gap-4 mb-8"
+            >
+              <motion.a
+                href="/static/BravineMmbayiaresume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary flex items-center gap-3 px-8 py-4 text-lg shadow-lg hover:shadow-xl"
+              >
+                <BsFillSendFill className="text-xl" />
+                Download Resume
+              </motion.a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2 }}
               className="flex justify-center"
             >
               <motion.div
@@ -320,10 +344,16 @@ const Home = memo(() => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                   {
-                    icon: DiReact,
-                    title: "React & Next.js",
-                    description: "Building modern, scalable web applications with React ecosystem and Next.js for optimal performance.",
-                    color: "from-blue-400 to-cyan-400"
+                    icon: FaNodeJs,
+                    title: "Node.js & Backend",
+                    description: "Building scalable e-commerce backends and API infrastructure with Node.js, Vendure.js, and Express.js.",
+                    color: "from-green-500 to-emerald-500"
+                  },
+                  {
+                    icon: BsDatabaseCheck,
+                    title: "Database & Search",
+                    description: "Expert in MongoDB, Redis, Elasticsearch, and MySQL for optimized data storage and fast query performance.",
+                    color: "from-purple-500 to-pink-500"
                   },
                   {
                     icon: SiTypescript,
@@ -332,27 +362,21 @@ const Home = memo(() => {
                     color: "from-blue-500 to-indigo-500"
                   },
                   {
-                    icon: SiTailwindcss,
-                    title: "Tailwind CSS",
-                    description: "Creating beautiful, responsive designs with utility-first CSS framework and modern design systems.",
-                    color: "from-teal-400 to-cyan-400"
+                    icon: BsLightning,
+                    title: "API Management",
+                    description: "Implementing Kong API Gateway with multi-workspace setup, Lua scripting, and Prometheus monitoring.",
+                    color: "from-red-500 to-orange-500"
                   },
                   {
-                    icon: FaNodeJs,
-                    title: "Node.js",
-                    description: "Building robust backend services and APIs with Node.js for full-stack development capabilities.",
-                    color: "from-green-500 to-emerald-500"
-                  },
-                  {
-                    icon: BsDatabaseCheck,
-                    title: "Database Management",
-                    description: "Working with MySQL and MongoDB for efficient data storage and retrieval in web applications.",
-                    color: "from-purple-500 to-pink-500"
+                    icon: BsPalette,
+                    title: "Frontend Development",
+                    description: "Building modern UIs with React, Next.js, and Tailwind CSS for exceptional user experiences.",
+                    color: "from-blue-400 to-cyan-400"
                   },
                   {
                     icon: BsGithub,
-                    title: "Version Control",
-                    description: "Expert in Git and GitHub for collaborative development and maintaining clean code repositories.",
+                    title: "DevOps & CI/CD",
+                    description: "Docker containerization, GitHub Actions automation, and Azure DevOps for streamlined deployments.",
                     color: "from-gray-600 to-gray-800"
                   }
                 ].map((skill, index) => (
@@ -403,39 +427,25 @@ const Home = memo(() => {
                 </motion.h3>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {[
                   {
                     image: "/Screenshot8.png",
-                    title: "The Christian Union Web-App",
-                    description: "A comprehensive web application for Christian Union management with modern UI/UX design.",
-                    tech: ["React.js", "Tailwind CSS", "Node.js"],
-                    link: "https://luckybravine.github.io/christian-union-static-version/",
-                    delay: 0
-                  },
-                  {
-                    image: "/smartkitchen.png",
-                    title: "Smart Kitchen App",
-                    description: "An innovative kitchen management application with smart features and intuitive design.",
-                    tech: ["React.js", "TypeScript", "GSAP"],
-                    link: "https://kitchen-app-cyan.vercel.app/",
-                    delay: 0.1
+                    title: "Secure E-Commerce Platform",
+                    description: "CIAM-enabled backend with Azure AD B2C, BullMQ, and Elasticsearch. Built scalable e-commerce infrastructure with 40% performance improvement and 60% sync time reduction.",
+                    tech: ["Vendure.js", "Azure AD B2C", "BullMQ", "Elasticsearch", "Docker", "Node.js"],
+                    link: "https://github.com/luckyBravine",
+                    delay: 0,
+                    achievements: ["40% Performance Boost", "60% Sync Improvement", "80% Automation Gain"]
                   },
                   {
                     image: "/api.png",
-                    title: "API Collection",
-                    description: "A curated collection of APIs with modern integration and documentation features.",
-                    tech: ["Next.js", "RapidAPI"],
-                    link: "https://luckybravine.github.io/christian-union-static-version/",
-                    delay: 0.2
-                  },
-                  {
-                    image: "/houseslider.png",
-                    title: "House Slider",
-                    description: "An interactive house showcase with smooth animations and modern slider functionality.",
-                    tech: ["React.js", "Tailwind CSS", "GSAP"],
-                    link: "https://house-slider-3pddhi7ai-luckybravine.vercel.app/",
-                    delay: 0.3
+                    title: "Kong API Gateway Automation",
+                    description: "Multi-workspace Kong setup with Lua scripting & Prometheus monitoring. Automated token generation cutting provisioning time by 80% with Dockerized deployments.",
+                    tech: ["Kong Gateway", "Lua Scripts", "Prometheus", "Docker", "Azure DevOps"],
+                    link: "https://github.com/luckyBravine",
+                    delay: 0.1,
+                    achievements: ["80% Automation Improvement", "Multi-workspace Setup", "High Availability"]
                   }
                 ].map((project, index) => (
                   <motion.div
@@ -471,6 +481,21 @@ const Home = memo(() => {
                             </span>
                           ))}
                         </div>
+                        {project.achievements && (
+                          <div className="mb-4">
+                            <h5 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">Key Achievements:</h5>
+                            <div className="flex flex-wrap gap-1">
+                              {project.achievements.map((achievement) => (
+                                <span
+                                  key={achievement}
+                                  className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded text-xs font-medium"
+                                >
+                                  {achievement}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                       <motion.a
                         href={project.link}
@@ -483,6 +508,127 @@ const Home = memo(() => {
                         View Project
                         <MdKeyboardDoubleArrowRight className="text-lg" />
                       </motion.a>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        {/* Experience Section */}
+        <AnimatedSection delay={0.5}>
+          <section className="py-20 px-6 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <motion.span
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-4"
+                >
+                  Professional Journey
+                </motion.span>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-4xl md:text-5xl font-playfair font-bold text-gray-800 dark:text-white mb-6"
+                >
+                  Work Experience
+                </motion.h3>
+              </div>
+
+              <div className="space-y-8 max-w-4xl mx-auto">
+                {[
+                  {
+                    title: "Backend Developer / API Engineer",
+                    company: "Digital Qatalyst",
+                    period: "Nov 2024 – Present",
+                    type: "Full-time",
+                    location: "Hybrid",
+                    description: "Building scalable e-commerce backends and API infrastructure with cutting-edge technologies.",
+                    achievements: [
+                      "Built scalable e-commerce backend using Vendure.js with Azure AD B2C integration",
+                      "Developed event-driven sync system reducing Dynamics 365 CRM sync delays by 60%",
+                      "Enhanced product search with Elasticsearch, cutting query latency by 40%",
+                      "Containerized backend with Docker and automated CI/CD pipelines via GitHub Actions",
+                      "Deployed Kong API Gateway with multi-workspace setup",
+                      "Automated token generation cutting provisioning time by 80%"
+                    ],
+                    tech: ["Vendure.js", "Azure AD B2C", "BullMQ", "Elasticsearch", "Docker", "Kong Gateway"]
+                  },
+                  {
+                    title: "Freelance Full-Stack Developer",
+                    company: "Self-Employed",
+                    period: "Aug 2022 – Aug 2023",
+                    type: "Freelance",
+                    location: "Remote",
+                    description: "Delivering full-stack solutions for various clients with focus on performance and user experience.",
+                    achievements: [
+                      "Rebuilt Christian Union website with React.js and Node.js",
+                      "Implemented Redis caching and MongoDB optimization",
+                      "Boosted user engagement by 65% through improved UX",
+                      "Delivered multiple e-commerce platforms",
+                      "Optimized API performance and database queries"
+                    ],
+                    tech: ["React.js", "Node.js", "MongoDB", "Redis", "Tailwind CSS"]
+                  }
+                ].map((exp, index) => (
+                  <motion.div
+                    key={exp.title}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    whileHover={{ y: -5 }}
+                    className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-soft hover:shadow-hard border border-gray-100 dark:border-gray-700"
+                  >
+                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
+                      <div>
+                        <h4 className="text-2xl font-poppins font-bold text-gray-800 dark:text-white mb-2">{exp.title}</h4>
+                        <div className="flex items-center gap-4 mb-2">
+                          <h5 className="text-xl font-poppins font-semibold text-primary-600 dark:text-primary-400">{exp.company}</h5>
+                          <div className="flex gap-2">
+                            <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+                              {exp.type}
+                            </span>
+                            <span className="px-3 py-1 bg-secondary-100 dark:bg-secondary-900 text-secondary-700 dark:text-secondary-300 rounded-full text-sm font-medium">
+                              {exp.location}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-lg font-poppins font-semibold text-gray-600 dark:text-gray-300">{exp.period}</span>
+                    </div>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 text-lg font-poppins">
+                      {exp.description}
+                    </p>
+                    
+                    <div className="mb-6">
+                      <h6 className="font-poppins font-semibold text-gray-800 dark:text-white mb-3">Key Achievements:</h6>
+                      <ul className="space-y-2">
+                        {exp.achievements.map((achievement, i) => (
+                          <li key={i} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                            <BsLightning className="text-primary-500 mt-1 flex-shrink-0" />
+                            <span className="font-poppins">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h6 className="font-poppins font-semibold text-gray-800 dark:text-white mb-3">Technologies Used:</h6>
+                      <div className="flex flex-wrap gap-2">
+                        {exp.tech.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-full text-sm font-poppins font-medium text-gray-700 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 ))}
