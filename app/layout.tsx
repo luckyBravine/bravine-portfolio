@@ -21,26 +21,30 @@ const playfair = Playfair_Display({
 })
 
 export const metadata = {
-  title: 'Bravine Alusiola - Frontend Developer',
-  description: 'Professional Frontend Developer specializing in React, TypeScript, and modern web technologies. Creating stunning, responsive, and performant web experiences.',
-  keywords: 'Frontend Developer, React, TypeScript, Next.js, Web Development, Portfolio',
+  title: 'Bravine Alusiola - Software Engineer & Backend Developer',
+  description: 'Backend Engineer with 3+ years of experience building scalable APIs, e-commerce platforms, and event-driven systems. Specialized in Node.js, Vendure.js, and Azure AD B2C.',
+  keywords: 'Backend Developer, Node.js, Vendure.js, Azure AD B2C, Kong API Gateway, Elasticsearch, MongoDB, Docker, Software Engineer, Portfolio',
   authors: [{ name: 'Bravine Alusiola' }],
   creator: 'Bravine Alusiola',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://bravine.dev',
-    title: 'Bravine Alusiola - Frontend Developer',
-    description: 'Professional Frontend Developer specializing in React, TypeScript, and modern web technologies.',
+    title: 'Bravine Alusiola - Software Engineer & Backend Developer',
+    description: 'Backend Engineer with 3+ years of experience building scalable APIs, e-commerce platforms, and event-driven systems.',
     siteName: 'Bravine Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bravine Alusiola - Frontend Developer',
-    description: 'Professional Frontend Developer specializing in React, TypeScript, and modern web technologies.',
+    title: 'Bravine Alusiola - Software Engineer & Backend Developer',
+    description: 'Backend Engineer with 3+ years of experience building scalable APIs, e-commerce platforms, and event-driven systems.',
     creator: '@LuckyBravine',
   },
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
