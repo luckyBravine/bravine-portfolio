@@ -1,0 +1,426 @@
+{
+  "nodes": [
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "language",
+      "proficiency": 95,
+      "description": "Primary development language for type-safe applications",
+      "color": "#3178C6"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "language",
+      "proficiency": 98,
+      "description": "Core web development language",
+      "color": "#F7DF1E"
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "language",
+      "proficiency": 85,
+      "description": "Backend development and automation",
+      "color": "#3776AB"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "framework",
+      "proficiency": 92,
+      "description": "Component-based UI framework",
+      "color": "#61DAFB"
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "framework",
+      "proficiency": 90,
+      "description": "React framework for production applications",
+      "color": "#000000"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "platform",
+      "proficiency": 88,
+      "description": "JavaScript runtime for server-side applications",
+      "color": "#339933"
+    },
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "category": "framework",
+      "proficiency": 80,
+      "description": "3D graphics library for WebGL",
+      "color": "#049EF4"
+    },
+    {
+      "id": "react-three-fiber",
+      "name": "React Three Fiber",
+      "category": "framework",
+      "proficiency": 78,
+      "description": "React renderer for Three.js",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": "tailwindcss",
+      "name": "Tailwind CSS",
+      "category": "framework",
+      "proficiency": 93,
+      "description": "Utility-first CSS framework",
+      "color": "#06B6D4"
+    },
+    {
+      "id": "dynamics365",
+      "name": "Dynamics 365",
+      "category": "platform",
+      "proficiency": 87,
+      "description": "Microsoft CRM and business applications platform",
+      "color": "#002050"
+    },
+    {
+      "id": "power-automate",
+      "name": "Power Automate",
+      "category": "tool",
+      "proficiency": 90,
+      "description": "Cloud-based automation and workflow tool",
+      "color": "#0066FF"
+    },
+    {
+      "id": "dataverse",
+      "name": "Dataverse",
+      "category": "database",
+      "proficiency": 85,
+      "description": "Microsoft cloud database for business applications",
+      "color": "#742774"
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "database",
+      "proficiency": 82,
+      "description": "Advanced open-source relational database",
+      "color": "#336791"
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "database",
+      "proficiency": 80,
+      "description": "NoSQL document database",
+      "color": "#47A248"
+    },
+    {
+      "id": "kong",
+      "name": "Kong API Gateway",
+      "category": "platform",
+      "proficiency": 83,
+      "description": "Cloud-native API gateway and service mesh",
+      "color": "#003459"
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "category": "tool",
+      "proficiency": 86,
+      "description": "Containerization platform",
+      "color": "#2496ED"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "platform",
+      "proficiency": 75,
+      "description": "Container orchestration platform",
+      "color": "#326CE5"
+    },
+    {
+      "id": "aws",
+      "name": "AWS",
+      "category": "cloud",
+      "proficiency": 81,
+      "description": "Amazon Web Services cloud platform",
+      "color": "#FF9900"
+    },
+    {
+      "id": "azure",
+      "name": "Azure",
+      "category": "cloud",
+      "proficiency": 84,
+      "description": "Microsoft cloud computing platform",
+      "color": "#0078D4"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "category": "cloud",
+      "proficiency": 89,
+      "description": "Frontend deployment and hosting platform",
+      "color": "#000000"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "tool",
+      "proficiency": 94,
+      "description": "Distributed version control system",
+      "color": "#F05032"
+    },
+    {
+      "id": "webpack",
+      "name": "Webpack",
+      "category": "tool",
+      "proficiency": 79,
+      "description": "Module bundler for JavaScript applications",
+      "color": "#8DD6F9"
+    },
+    {
+      "id": "graphql",
+      "name": "GraphQL",
+      "category": "tool",
+      "proficiency": 77,
+      "description": "Query language for APIs",
+      "color": "#E10098"
+    },
+    {
+      "id": "rest-api",
+      "name": "REST API",
+      "category": "tool",
+      "proficiency": 91,
+      "description": "RESTful API design and implementation",
+      "color": "#009688"
+    },
+    {
+      "id": "oauth",
+      "name": "OAuth 2.0",
+      "category": "tool",
+      "proficiency": 86,
+      "description": "Authorization framework for secure API access",
+      "color": "#EB5424"
+    }
+  ],
+  "edges": [
+    {
+      "source": "nextjs",
+      "target": "react",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "react",
+      "target": "javascript",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "react",
+      "target": "typescript",
+      "strength": 0.9,
+      "type": "uses"
+    },
+    {
+      "source": "nextjs",
+      "target": "typescript",
+      "strength": 0.95,
+      "type": "uses"
+    },
+    {
+      "source": "nextjs",
+      "target": "nodejs",
+      "strength": 0.9,
+      "type": "uses"
+    },
+    {
+      "source": "react-three-fiber",
+      "target": "react",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "react-three-fiber",
+      "target": "threejs",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "threejs",
+      "target": "javascript",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "nextjs",
+      "target": "tailwindcss",
+      "strength": 0.85,
+      "type": "uses"
+    },
+    {
+      "source": "power-automate",
+      "target": "dynamics365",
+      "strength": 0.95,
+      "type": "uses"
+    },
+    {
+      "source": "power-automate",
+      "target": "dataverse",
+      "strength": 0.9,
+      "type": "uses"
+    },
+    {
+      "source": "dynamics365",
+      "target": "dataverse",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "dynamics365",
+      "target": "azure",
+      "strength": 0.85,
+      "type": "uses"
+    },
+    {
+      "source": "power-automate",
+      "target": "oauth",
+      "strength": 0.8,
+      "type": "uses"
+    },
+    {
+      "source": "power-automate",
+      "target": "rest-api",
+      "strength": 0.9,
+      "type": "uses"
+    },
+    {
+      "source": "kong",
+      "target": "rest-api",
+      "strength": 0.95,
+      "type": "uses"
+    },
+    {
+      "source": "kong",
+      "target": "docker",
+      "strength": 0.85,
+      "type": "uses"
+    },
+    {
+      "source": "kong",
+      "target": "kubernetes",
+      "strength": 0.8,
+      "type": "uses"
+    },
+    {
+      "source": "nodejs",
+      "target": "javascript",
+      "strength": 1.0,
+      "type": "uses"
+    },
+    {
+      "source": "nodejs",
+      "target": "typescript",
+      "strength": 0.85,
+      "type": "uses"
+    },
+    {
+      "source": "nodejs",
+      "target": "postgresql",
+      "strength": 0.75,
+      "type": "uses"
+    },
+    {
+      "source": "nodejs",
+      "target": "mongodb",
+      "strength": 0.7,
+      "type": "uses"
+    },
+    {
+      "source": "postgresql",
+      "target": "mongodb",
+      "strength": 0.6,
+      "type": "alternative"
+    },
+    {
+      "source": "nextjs",
+      "target": "vercel",
+      "strength": 0.9,
+      "type": "uses"
+    },
+    {
+      "source": "vercel",
+      "target": "aws",
+      "strength": 0.5,
+      "type": "related"
+    },
+    {
+      "source": "vercel",
+      "target": "azure",
+      "strength": 0.5,
+      "type": "alternative"
+    },
+    {
+      "source": "docker",
+      "target": "kubernetes",
+      "strength": 0.85,
+      "type": "uses"
+    },
+    {
+      "source": "kubernetes",
+      "target": "aws",
+      "strength": 0.75,
+      "type": "uses"
+    },
+    {
+      "source": "kubernetes",
+      "target": "azure",
+      "strength": 0.75,
+      "type": "uses"
+    },
+    {
+      "source": "nextjs",
+      "target": "webpack",
+      "strength": 0.7,
+      "type": "uses"
+    },
+    {
+      "source": "rest-api",
+      "target": "graphql",
+      "strength": 0.6,
+      "type": "alternative"
+    },
+    {
+      "source": "rest-api",
+      "target": "oauth",
+      "strength": 0.8,
+      "type": "uses"
+    },
+    {
+      "source": "git",
+      "target": "vercel",
+      "strength": 0.7,
+      "type": "related"
+    },
+    {
+      "source": "typescript",
+      "target": "javascript",
+      "strength": 0.95,
+      "type": "related"
+    },
+    {
+      "source": "python",
+      "target": "rest-api",
+      "strength": 0.8,
+      "type": "uses"
+    },
+    {
+      "source": "python",
+      "target": "postgresql",
+      "strength": 0.75,
+      "type": "uses"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-15T00:00:00Z"
+  }
+}
