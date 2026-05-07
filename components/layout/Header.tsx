@@ -45,7 +45,7 @@ export function Header({ activeSection, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('hero')}
             className="text-2xl font-bold text-white hover:text-blue-400 transition-colors duration-200"
           >
-            BM
+            MA
           </button>
 
           <div className="hidden md:flex items-center gap-8">

@@ -71,7 +71,7 @@ export default function CSS3DPage() {
             {/* Laptop Screen */}
             <div className="w-full h-full bg-gradient-to-br from-blue-900 to-blue-950 rounded-lg flex items-center justify-center text-blue-400 text-[10px] font-mono p-2">
               <div>
-                <div>// API Gateway</div>
+                <div>{'// API Gateway'}</div>
                 <div>app.use('/api')</div>
               </div>
             </div>

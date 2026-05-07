@@ -1,15 +1,8 @@
 'use client';
 
-import React, { forwardRef, useState, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
 import type { HeroContent } from '@/lib/types/content';
-
-// Dynamically import the 3D scene to avoid SSR issues
-const VanillaDeskScene = dynamic(
-  () => import('@/components/3d/VanillaDeskScene'),
-  { ssr: false }
-);
 
 interface HeroSectionProps {
   content: HeroContent;
@@ -17,32 +10,24 @@ interface HeroSectionProps {
 
 export const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(
   ({ content }, ref) => {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-      setMounted(true);
-    }, []);
-
     return (
       <section
         ref={ref}
         id="hero"
         className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden"
       >
-        {/* 3D Background Scene */}
-        {mounted && (
-          <div className="absolute inset-0 opacity-40">
-            <VanillaDeskScene />
-          </div>
-        )}
-
-        {/* Overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-transparent to-gray-900/80 pointer-events-none" />
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+        </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg"
+            className="text-5xl md:text-7xl font-bold mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -51,7 +36,7 @@ export const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(
           </motion.h1>
 
           <motion.h2
-            className="text-2xl md:text-3xl text-blue-400 mb-6 drop-shadow-lg"
+            className="text-2xl md:text-3xl text-blue-400 mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -60,7 +45,7 @@ export const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(
           </motion.h2>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto drop-shadow-lg"
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -78,7 +63,7 @@ export const HeroSection = forwardRef<HTMLElement, HeroSectionProps>(
               <a
                 key={index}
                 href={button.href}
-                className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 shadow-lg ${
+                className={`px-8 py-3 rounded-lg font-semibold transition-all duration-200 ${
                   button.variant === 'primary'
                     ? 'bg-blue-600 hover:bg-blue-700 text-white'
                     : 'bg-gray-700 hover:bg-gray-600 text-white'

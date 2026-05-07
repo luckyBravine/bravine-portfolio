@@ -7,7 +7,8 @@ export default function VanillaDeskScene() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -34,7 +35,7 @@ export default function VanillaDeskScene() {
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
     renderer.domElement.style.pointerEvents = 'none'; // Allow clicks to pass through
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     // Lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
@@ -72,7 +73,7 @@ export default function VanillaDeskScene() {
 
     // Screen content (glowing)
     const contentGeometry = new THREE.PlaneGeometry(1.5, 1.1);
-    const contentMaterial = new THREE.MeshBasicMaterial({
+    const contentMaterial = new THREE.MeshStandardMaterial({
       color: 0x003300,
       emissive: 0x00ff00,
       emissiveIntensity: 0.3,
@@ -104,7 +105,7 @@ export default function VanillaDeskScene() {
 
     // Laptop screen content
     const laptopContentGeometry = new THREE.PlaneGeometry(1.1, 0.7);
-    const laptopContentMaterial = new THREE.MeshBasicMaterial({
+    const laptopContentMaterial = new THREE.MeshStandardMaterial({
       color: 0x001a33,
       emissive: 0x0088ff,
       emissiveIntensity: 0.3,
@@ -257,7 +258,9 @@ export default function VanillaDeskScene() {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
-      containerRef.current?.removeChild(renderer.domElement);
+      if (container) {
+        container.removeChild(renderer.domElement);
+      }
       renderer.dispose();
     };
   }, []);

@@ -44,7 +44,7 @@ export function DeskScene() {
         {/* Screen content - glowing green */}
         <mesh position={[0, 0, 0.05]}>
           <planeGeometry args={[1.5, 1.1]} />
-          <meshBasicMaterial color="#003300" emissive="#00ff00" emissiveIntensity={0.3} />
+          <meshStandardMaterial color="#003300" emissive="#00ff00" emissiveIntensity={0.3} />
         </mesh>
       </group>
 
@@ -65,7 +65,7 @@ export function DeskScene() {
         {/* Screen content - glowing blue */}
         <mesh position={[0, 0.5, -0.28]} rotation={[-0.2, 0, 0]}>
           <planeGeometry args={[1.1, 0.7]} />
-          <meshBasicMaterial color="#001a33" emissive="#0088ff" emissiveIntensity={0.3} />
+          <meshStandardMaterial color="#001a33" emissive="#0088ff" emissiveIntensity={0.3} />
         </mesh>
       </group>
 

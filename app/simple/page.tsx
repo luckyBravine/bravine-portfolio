@@ -91,18 +91,13 @@ export default function SimplePage() {
                     </span>
                   ))}
                 </div>
-                {project.links && (
+                {project.links && project.links.length > 0 && (
                   <div className="flex gap-4">
-                    {project.links.github && (
-                      <a href={project.links.github} className="text-blue-400 hover:underline">
-                        GitHub
+                    {project.links.map((link, i) => (
+                      <a key={i} href={link.url} className="text-blue-400 hover:underline">
+                        {link.label}
                       </a>
-                    )}
-                    {project.links.live && (
-                      <a href={project.links.live} className="text-blue-400 hover:underline">
-                        Live Demo
-                      </a>
-                    )}
+                    ))}
                   </div>
                 )}
               </div>

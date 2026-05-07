@@ -3,16 +3,13 @@
 import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import type { SkillsContent } from '@/lib/types/content';
-import type { TechnologyGraph } from '@/lib/types/technology-graph';
-import { VisualizationRouter } from '../visualizations/VisualizationRouter';
 
 interface SkillsSectionProps {
   content: SkillsContent;
-  technologyGraph: TechnologyGraph;
 }
 
 export const SkillsSection = forwardRef<HTMLElement, SkillsSectionProps>(
-  ({ content, technologyGraph }, ref) => {
+  ({ content }, ref) => {
     return (
       <section
         ref={ref}
@@ -30,33 +27,12 @@ export const SkillsSection = forwardRef<HTMLElement, SkillsSectionProps>(
             Skills & Technologies
           </motion.h2>
 
-          {/* 3D/2D Visualization */}
-          <motion.div
-            className="mb-16 bg-gray-800 rounded-lg p-4 border border-gray-700"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="w-full h-[600px]">
-              <VisualizationRouter
-                graph={technologyGraph}
-                width={800}
-                height={600}
-              />
-            </div>
-            <p className="text-center text-gray-400 text-sm mt-4">
-              Interactive technology network - hover or click nodes to explore
-            </p>
-          </motion.div>
-
-          {/* Skill categories */}
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {content.categories.map((category, index) => (
               <div

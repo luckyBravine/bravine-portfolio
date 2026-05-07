@@ -1,6 +1,6 @@
 'use client';
 
-import { VanillaDeskScene } from '@/components/3d/VanillaDeskScene';
+import VanillaDeskScene from '@/components/3d/VanillaDeskScene';
 
 export default function Hero3DPage() {
   return (

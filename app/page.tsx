@@ -1,9 +1,6 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
-import { NetworkDetector } from '@/lib/detectors/NetworkDetector';
-import { useCapability } from '@/lib/contexts/capability-context';
-import { useNavigationController } from '@/lib/hooks/useNavigationController';
+import React, { useRef, useState } from 'react';
 import { Header } from '@/components/layout/Header';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { Footer } from '@/components/layout/Footer';
@@ -15,15 +12,11 @@ import { SkillsSection } from '@/components/sections/SkillsSection';
 import { EducationSection } from '@/components/sections/EducationSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { portfolioContent } from '@/lib/data/portfolio-content';
-import technologyGraph from '@/lib/data/technology-graph.example.json';
-import type { TechnologyGraph } from '@/lib/types/technology-graph';
+import { useNavigationController } from '@/lib/hooks/useNavigationController';
 
 export default function Home() {
-  const { setClassification } = useCapability();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
-  // Create refs for all sections
   const heroRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
@@ -47,30 +40,10 @@ export default function Home() {
     offset: 80,
   });
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-900">
-        <div className="text-white text-2xl">Loading...</div>
-      </div>
-    );
-  }
-
   return (
     <>
-      {/* Network capability detector */}
-      <NetworkDetector
-        onClassificationComplete={setClassification}
-        timeout={500}
-      />
-
-      {/* Header */}
       <Header activeSection={activeSection} onNavigate={scrollToSection} />
 
-      {/* Mobile menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
@@ -89,18 +62,16 @@ export default function Home() {
         </svg>
       </button>
 
-      {/* Main content */}
       <main>
         <HeroSection ref={heroRef} content={portfolioContent.hero} />
         <AboutSection ref={aboutRef} content={portfolioContent.about} />
         <ExperienceSection ref={experienceRef} content={portfolioContent.experience} />
         <ProjectsSection ref={projectsRef} content={portfolioContent.projects} />
-        <SkillsSection ref={skillsRef} content={portfolioContent.skills} technologyGraph={technologyGraph as TechnologyGraph} />
+        <SkillsSection ref={skillsRef} content={portfolioContent.skills} />
         <EducationSection ref={educationRef} content={portfolioContent.education} />
         <ContactSection ref={contactRef} content={portfolioContent.contact} />
       </main>
 
-      {/* Footer */}
       <Footer />
     </>
   );

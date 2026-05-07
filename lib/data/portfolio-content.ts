@@ -187,8 +187,8 @@ export const portfolioContent: PortfolioContent = {
 
   contact: {
     email: 'bravinemmbayia@gmail.com',
-    phone: '+254799117106',
-    location: 'Nairobi, Kenya',
+    phone: '',
+    location: 'Vancouver, Canada',
     social: [
       {
         platform: 'GitHub',
